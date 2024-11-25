@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/23 16:27:23 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/25 15:48:40 by ehossain         ###   ########.fr       */
+/*   Created: 2024/11/21 14:28:12 by ehossain          #+#    #+#             */
+/*   Updated: 2024/11/25 12:05:10 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#include "printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
+void	ft_putstr(char *s)
+{
+	int	i;
 
-int		ft_printf(const char *format, ...);
-void	ft_putstr(char *s);
-void	ft_putchar(char c);
-void	ft_putnbr(int n);
-int		ft_strlen(const char *s);
-
-#endif
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
+}
