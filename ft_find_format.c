@@ -6,7 +6,7 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:44:16 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/26 16:44:45 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/27 11:53:47 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,10 @@ int	ft_find_format(char format, va_list args)
 	else if (format == 's')
 		count = ft_putstr(va_arg(args, char *));
 	else if (format == 'd')
-		return (count);
+		count = ft_putdec(va_arg(args, int));
+	else if (format == 'i')
+		count = ft_putdec(va_arg(args, int));
+	else if (format == 'u')
+		count = ft_putuns(va_arg(args, unsigned int));
+	return (count);
 }

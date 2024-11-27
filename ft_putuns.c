@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putuns.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 10:40:58 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 10:41:15 by ehossain         ###   ########.fr       */
+/*   Created: 2024/11/27 11:48:31 by ehossain          #+#    #+#             */
+/*   Updated: 2024/11/27 12:40:30 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_putchar(char c)
+unsigned int	ft_putuns(unsigned int nb)
 {
-	int	i;
-
-	i = write(1, &c, 1);
-	return (i);
+	if (nb == 4294967295)
+	{
+		return (write(1, "4294967295", 11));
+	}
+	if (nb > 9)
+	{
+		ft_putuns(nb / 10);
+		ft_putchar(nb % 10 + '0');
+	}
+	else
+	{
+		ft_putchar(nb % 10 + '0');
+	}
+	return (0);
 }
