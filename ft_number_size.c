@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putdec.c                                        :+:      :+:    :+:   */
+/*   ft_number_size.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 16:45:27 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 13:47:28 by ehossain         ###   ########.fr       */
+/*   Created: 2024/11/27 13:34:08 by ehossain          #+#    #+#             */
+/*   Updated: 2024/11/27 13:37:44 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_putdec(int nb)
+unsigned int	ft_number_size(long int nb)
 {
-	int	count;
+	int	i;
 
-	count = ft_number_size(nb);
-	if (nb == -2147483648)
+	i = 0;
+	if (nb == 0)
+		return (1);
+	if (nb < 0)
+		i++;
+	while (nb != 0)
 	{
-		write(1, "-2147483648", 11);
+		nb = nb / 10;
+		i++;
 	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		count = -nb;
-	}
-	else if (nb > 9)
-	{
-		ft_putdec(nb / 10);
-		ft_putchar((nb % 10) + '0');
-	}
-	else
-		ft_putchar((nb % 10) + '0');
-	return (count);
+	return (i);
 }

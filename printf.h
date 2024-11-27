@@ -6,7 +6,7 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:35:37 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 11:50:01 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:29:32 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,9 @@ int				ft_putstr(const char *str);
 int				ft_find_format(char format, va_list args);
 int				ft_putdec(int nb);
 unsigned int	ft_putuns(unsigned int nb);
-
+unsigned int	ft_number_size(long int nb);
+int				ft_puthexa_x(int nb);
+int				ft_puthexa_X(int nb);
+int				ft_puthexa_ptr(long nb);
+int				ft_putptr(void *add);
 #endif

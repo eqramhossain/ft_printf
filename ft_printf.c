@@ -6,7 +6,7 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:40:41 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 12:29:36 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:36:09 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ int	main(void)
 	total += printf("This is a string = %s\n", str);
 	total += printf("This is a decimal = %d et %d\n", 2147483647, -2147483648);
 	total += printf("This is a int = %i et %i\n", 2147483647, -2147483648);
-	total += printf("Thsi is a unsigned = %u et %u\n", 4294967295, 0);
+	total += printf("This is a unsigned = %u et %u\n", 4294967295, 0);
+	total += printf("This is a %% sign\n");
+	total += printf("This is hexa num %X et %X\n", 2147483647, -2147483648);
+	total += printf("This is hexa num %x et %x\n", 2147483647, -2147483648);
+	total += printf("This is a memory address %p\n", &total);
 	printf("The total Printed = %d\n", total);
 	total = 0;
 	total += ft_printf("This is a char = %c\n", c);
@@ -34,7 +38,11 @@ int	main(void)
 	total += ft_printf("This is a decimal = %d et %d\n", 2147483647,
 			-2147483648);
 	total += ft_printf("This is a int = %i et %i\n", 2147483647, -2147483648);
-	total += ft_printf("Thsi is a unsigned = %u et %u\n", 4294967295, 0);
+	total += ft_printf("This is a unsigned = %u et %u\n", 4294967295, 0);
+	total += ft_printf("This is a %% sign\n");
+	total += ft_printf("This is hexa num %X et %X\n", 2147483647, -2147483648);
+	total += ft_printf("This is hexa num %x et %x\n", 2147483647, -2147483648);
+	total += ft_printf("This is a memory address %p\n", &total);
 	ft_printf("The total Printed = %d\n", total);
 	return (0);
 }
