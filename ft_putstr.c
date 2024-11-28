@@ -6,11 +6,11 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:38:43 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 10:56:10 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/28 10:08:50 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(const char *str)
 {

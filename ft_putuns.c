@@ -6,13 +6,13 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 11:48:31 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 16:03:13 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/28 10:12:26 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-unsigned int	ft_putuns(unsigned int nb)
+int	ft_putuns(unsigned int nb)
 {
 	int	count;
 

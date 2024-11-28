@@ -6,25 +6,27 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 16:18:15 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 17:28:45 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/28 10:47:32 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putptr(void *add)
 {
-	int		count;
-	long	mem;
+	int				count;
+	unsigned long	mem;
 
 	count = 0;
-	mem = (long)add;
+	mem = (unsigned long)add;
+	if (add == NULL)
+		return (ft_putstr("(nil)"));
 	count += ft_putstr("0x");
-	count += ft_puthexa_ptr(mem);
+	count += ft_puthexa_ptr((unsigned long)mem);
 	return (count);
 }
 
-int	ft_puthexa_ptr(long nb)
+int	ft_puthexa_ptr(unsigned long nb)
 {
 	int		count;
 	char	*base;

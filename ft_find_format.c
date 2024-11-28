@@ -6,11 +6,11 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:44:16 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 16:40:17 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/28 10:34:46 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_find_format(char format, va_list args)
 {
@@ -30,9 +30,9 @@ int	ft_find_format(char format, va_list args)
 	else if (format == 'u')
 		count += ft_putuns(va_arg(args, unsigned int));
 	else if (format == 'X')
-		count += ft_puthexa_X(va_arg(args, int));
+		count += ft_puthexa_maj(va_arg(args, unsigned int));
 	else if (format == 'x')
-		count += ft_puthexa_x(va_arg(args, int));
+		count += ft_puthexa_min(va_arg(args, unsigned int));
 	else if (format == 'p')
 		count += ft_putptr(va_arg(args, void *));
 	return (count);

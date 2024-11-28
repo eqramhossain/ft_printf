@@ -6,11 +6,11 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:45:27 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 13:47:28 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/28 10:15:46 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putdec(int nb)
 {
@@ -24,7 +24,7 @@ int	ft_putdec(int nb)
 	else if (nb < 0)
 	{
 		ft_putchar('-');
-		count = -nb;
+		ft_putdec(-nb);
 	}
 	else if (nb > 9)
 	{

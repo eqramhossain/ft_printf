@@ -6,11 +6,11 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:34:08 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/27 13:37:44 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/11/28 10:08:01 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 unsigned int	ft_number_size(long int nb)
 {
