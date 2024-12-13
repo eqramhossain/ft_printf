@@ -6,7 +6,7 @@
 /*   By: ehossain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:40:41 by ehossain          #+#    #+#             */
-/*   Updated: 2024/11/28 10:47:50 by ehossain         ###   ########.fr       */
+/*   Updated: 2024/12/03 13:58:30 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	ft_printf(const char *format, ...);
 // 	total += printf("This is hexa num %x et %x\n", 2147483647, -2147483648);
 // 	total += printf("This is a memory address %p\n", &total);
 // 	total += printf("This is a mrmory address %p\n", 0);
+// 	total += printf("This is a wired test %d\n", printf(0));
 // 	printf("The total Printed = %d\n", total);
 // 	total = 0;
 // 	total += ft_printf("This is a char = %c\n", c);
@@ -45,6 +46,7 @@ int	ft_printf(const char *format, ...);
 // 	total += ft_printf("This is hexa num %x et %x\n", 2147483647, -2147483648);
 // 	total += ft_printf("This is a memory address %p\n", &total);
 // 	total += ft_printf("This is a memory address %p\n", 0);
+// 	total += ft_printf("This is a wired test %d\n", ft_printf(0));
 // 	ft_printf("The total Printed = %d\n", total);
 // 	return (0);
 // }
@@ -57,6 +59,8 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	len = 0;
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
